@@ -29,6 +29,14 @@ class ProductAdmin(admin.ModelAdmin):
     )
     actions = ["mark_as_low_stock"]
 
+    def save_model(self, request: HttpRequest, obj: Product, form, change: bool):
+        """
+        This method overrides the save_model method to associate the product with the current user.
+        """
+        if not change:
+            obj.user = request.user
+        super().save_model(request, obj, form, change)
+
     def mark_as_low_stock(
         self, request: HttpRequest, queryset: QuerySet[Product]
     ) -> None:

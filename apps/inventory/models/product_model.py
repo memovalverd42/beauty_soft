@@ -31,9 +31,6 @@ class Product(TimeStampedModel, IsActiveModel):
         on_delete=models.CASCADE,
     )
 
-    # Managers
-    objects = models.Manager()
-
     class Meta:
         verbose_name_plural = "products"
         ordering = ["-created"]
