@@ -1,0 +1,22 @@
+[project]
+name = "beauty-soft"
+version = "0.1.0"
+description = "API for Beauty Soft System"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django-filter>=25.1",
+    "django-rest-knox>=5.0.2",
+    "django==5.1.6",
+    "djangorestframework>=3.15.2",
+    "drf-spectacular>=0.28.0",
+    "markdown>=3.7",
+    "psycopg2-binary>=2.9.10",
+    "python-dotenv>=1.0.1",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "black>=25.1.0",
+    "isort>=6.0.0",
+]

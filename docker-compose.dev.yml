@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: postgres_beauty_soft
+    environment:
+      - POSTGRES_USER=beauty_soft_admin
+      - POSTGRES_PASSWORD=Memo#4284
+      - POSTGRES_DB=beauty_soft_db
+    ports:
+      - '5434:5432'
+    volumes:
+      - psql_beauty_soft_data:/var/lib/postgresql/data
+
+volumes:
+  psql_beauty_soft_data:
+    driver: local
