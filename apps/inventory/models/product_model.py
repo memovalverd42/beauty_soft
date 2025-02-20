@@ -4,11 +4,11 @@ This file contains the definition of the Product model.
 
 from django.conf import settings
 from django.db import models
-from apps.core.models import TimeStampedModel
+from apps.core.models import TimeStampedModel, IsActiveModel
 from apps.inventory.models import Category
 
 
-class Product(TimeStampedModel):
+class Product(TimeStampedModel, IsActiveModel):
     """
     This class defines the Product model.
     """

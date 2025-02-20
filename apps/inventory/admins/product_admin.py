@@ -15,8 +15,8 @@ class ProductAdmin(admin.ModelAdmin):
     This class defines the ProductAdmin class.
     """
 
-    list_display = ("name", "price", "quantity", "category")
-    list_filter = ("category",)
+    list_display = ("name", "price", "quantity", "category", "is_active")
+    list_filter = ("category", "is_active")
     search_fields = ("name", "category__name")
     list_per_page = 10
     ordering = ("name", "price")
